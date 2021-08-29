@@ -8,52 +8,21 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Sun CNC Service - Coming Soon</title>
-
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-  <!-- Custom fonts for this template -->
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-  <!-- Custom styles for this template -->
-  <link href="css/coming-soon.css" rel="stylesheet">
+  <title>Sun CNC Service</title>
 
 </head>
 
 <body>
-
-  <div class="overlay"></div>  
-  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-    <source src="mp4/bg.mp4" type="video/mp4">
-  </video>
-
-  <div class="masthead">
-    <div class="masthead-bg"></div>
-    <div class="container h-100">
-      <div class="row h-100">
-        <div class="col-12 my-auto">
-          <div class="masthead-content text-white py-5 py-md-0">
-            <h1 class="mb-3">SUN CNC SERVICE</h1>
-            <p class="mb-5">Coming Soon!</p>            
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="social-icons">
-    <ul class="list-unstyled text-center mb-0">      
-      <li class="list-unstyled-item">
-        <a href="https://www.facebook.com/SUN.CNC.SERVICE/" target="_blank">
-          <i class="fa fa-facebook-f"></i>
-        </a>
-      </li>      
-    </ul>
-  </div>
-  
+  <div id="adobe-dc-view"></div>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script type="text/javascript">
+    document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
+      var adobeDCView = new AdobeDC.View({clientId: "d04c086fb0b94f07b7cd2ea8e66883ed", divId: "adobe-dc-view"});
+      adobeDCView.previewFile({
+        content:{location: {url: "https://suncncservice.com/scs-catalogue.pdf"}},
+        metaData:{fileName: "SCS Catalogue.pdf"}
+      }, {embedMode: "IN_LINE"});
+    });
+  </script>
 </body>
-
 </html>
